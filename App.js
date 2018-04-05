@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 
@@ -17,20 +11,13 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu'
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={{ flex: 1 }}>
         <Header headerText={'Albums'} />
         <AlbumList />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
